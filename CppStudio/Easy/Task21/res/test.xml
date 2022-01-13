@@ -1,0 +1,59 @@
+п»ї<?xml version="1.0" encoding="windows-1251"?>
+<test>
+
+<question text="Сколько жизней у кошки?">
+
+<answerblock>
+
+<answer text = "1" criteria="3"/>
+<answer text = "9" criteria="1"/>
+<answer text = "9999999999" criteria="0"/>
+
+</answerblock>
+
+</question>
+
+<question text = "Да/нет?">
+
+<answerblock>
+
+<answer text = "Да" criteria="3"/>
+<answer text = "Или" criteria="0"/>
+<answer text = "Нет" criteria="-1"/>
+</answerblock>
+
+</question>
+
+<question text="2x2=?">
+
+<answerblock>
+
+<answer text = "4" criteria="0"/>
+<answer text = "4" criteria="1"/>
+<answer text = "5" criteria="5"/>
+
+</answerblock>
+
+</question>
+
+<question text = "Бест панк-рок группа эвар?">
+
+<answerblock>
+<answer text = "кис-кис" criteria="-9000"/>
+<answer text = "КИШ" criteria="0"/>
+<answer text = "Красная плесень" criteria="9000"/>
+</answerblock>
+
+</question>
+
+<question text = "Симпл-димпл или попыт?">
+
+<answerblock>
+<answer text = "поридж" criteria="228"/>
+<answer text = "это база" criteria="1337"/>
+<answer text = "я думер, гигачад, мужик с бородой" criteria="9000"/>
+</answerblock>
+
+</question>
+
+</test>

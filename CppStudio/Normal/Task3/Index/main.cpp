@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <cstdlib>
 #include <Windows.h>
 #include <sstream>
@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     SetConsoleOutputCP(1251);
 
-    cout << "Динамический массив через индексы\r\n";
+    cout << "Р”РёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ С‡РµСЂРµР· РёРЅРґРµРєСЃС‹\r\n";
 
     unsigned matrixRows;
     unsigned matrixColumns;
@@ -18,34 +18,34 @@ int main() {
     InputValue<unsigned>* UnsignedInput = new InputValue<unsigned>();
     InputValue<int>* IntInput = new InputValue<int>();
 
-    //параметры для матрицы и вектора
-    UnsignedInput->SetMessage("Количество строк матрицы: ");
+    //РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РјР°С‚СЂРёС†С‹ Рё РІРµРєС‚РѕСЂР°
+    UnsignedInput->SetMessage("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РјР°С‚СЂРёС†С‹: ");
     matrixRows = UnsignedInput->GetValue();
 
-    UnsignedInput->SetMessage("Количество столбцов матрицы: ");
+    UnsignedInput->SetMessage("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РјР°С‚СЂРёС†С‹: ");
     matrixColumns = UnsignedInput->GetValue();
 
     int** matrix = new int* [matrixRows];
     for (int i = 0; i < matrixRows; ++i)
         matrix[i] = new int[matrixColumns];
 
-    //значения матрицы
+    //Р·РЅР°С‡РµРЅРёСЏ РјР°С‚СЂРёС†С‹
     for (unsigned j = 0; j < matrixRows; ++j) {
         for (unsigned i = 0; i < matrixColumns; ++i) {
-            IntInput->SetMessage("Элемент матрицы [" + to_string(i) + "][" + to_string(j) + "] = ");
+            IntInput->SetMessage("Р­Р»РµРјРµРЅС‚ РјР°С‚СЂРёС†С‹ [" + to_string(i) + "][" + to_string(j) + "] = ");
             matrix[j][i] = IntInput->GetValue();
         }
     }
 
-    //значения вектора
+    //Р·РЅР°С‡РµРЅРёСЏ РІРµРєС‚РѕСЂР°
     int* vec = new int[matrixColumns];
     for (unsigned i = 0; i < matrixColumns; ++i) {
-        IntInput->SetMessage("Элемент вектора [" + to_string(i) + "] = ");
+        IntInput->SetMessage("Р­Р»РµРјРµРЅС‚ РІРµРєС‚РѕСЂР° [" + to_string(i) + "] = ");
         vec[i] = IntInput->GetValue();
     }
     cout << endl;
 
-    //умножаем матрицу на вектор
+    //СѓРјРЅРѕР¶Р°РµРј РјР°С‚СЂРёС†Сѓ РЅР° РІРµРєС‚РѕСЂ
     int* result = new int[matrixRows];
     for (int i = 0; i < matrixRows; ++i) {
         result[i] = 0;
@@ -57,14 +57,14 @@ int main() {
         }
     }
 
-    //находим максимальное значение
+    //РЅР°С…РѕРґРёРј РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
     int max = result[0];
     for (int i = 1; i < matrixRows; ++i) {
         if (max < result[i]) max = result[i];
     }
 
-    //вывод результата
-    cout << "Матрица:\n";
+    //РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+    cout << "РњР°С‚СЂРёС†Р°:\n";
     for (unsigned j = 0; j < matrixRows; ++j) {
         for (unsigned i = 0; i < matrixColumns; ++i) {
             cout << matrix[j][i] << " ";
@@ -72,17 +72,17 @@ int main() {
         cout << endl;
     }
 
-    cout << "Вектор:\n";
+    cout << "Р’РµРєС‚РѕСЂ:\n";
     for (int i = 0; i < matrixColumns; ++i) {
         cout << vec[i] << endl;
     }
 
-    cout << "Результат:\n";
+    cout << "Р РµР·СѓР»СЊС‚Р°С‚:\n";
     for (int i = 0; i < matrixRows; ++i) {
         cout << result[i] << endl;
     }
 
-    cout << "Максимальное значение:\n";
+    cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ:\n";
     cout << max << endl;
 
     system("pause");

@@ -400,3 +400,6 @@ FodyWeavers.xsd
 /CppStudio/Normal/Task12/include/pugixml.cpp
 /CppStudio/Normal/Task12/include/pugiconfig.hpp
 /CppStudio/Normal/Task12/res
+/CppStudio/Easy/Task21/include/pugixml.hpp
+/CppStudio/Easy/Task21/include/pugixml.cpp
+/CppStudio/Easy/Task21/include/pugiconfig.hpp
